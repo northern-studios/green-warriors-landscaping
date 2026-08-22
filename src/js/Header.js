@@ -123,11 +123,11 @@ class Header {
   }
 
   updateTime() {
-    const parts = new Intl.DateTimeFormat('en-AU', {
+    const parts = new Intl.DateTimeFormat('en-US', {
       hour: 'numeric',
       minute: '2-digit',
       hour12: true,
-      timeZone: 'Australia/Sydney',
+      timeZone: 'America/Toronto',
     }).formatToParts(new Date());
 
     let hour = parts.find((p) => p.type === 'hour').value;
