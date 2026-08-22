@@ -1,0 +1,26 @@
+{
+  "name": "green-warriors-landscaping",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Faithful reproduction of the telhaclarke.com.au homepage, from the preloader through the Selected Works section.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@unseenco/taxi": "^1.8.0",
+    "gsap": "3.13.0",
+    "lenis": "1.3.8",
+    "mitt": "^3.0.1",
+    "throttle-debounce": "^5.0.2",
+    "vanilla-lazyload": "^19.1.3"
+  },
+  "devDependencies": {
+    "vite": "^7.1.3"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}
