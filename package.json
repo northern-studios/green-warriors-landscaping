@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Faithful reproduction of the telhaclarke.com.au homepage, from the preloader through the Selected Works section.",
+  "description": "Green Warriors Landscaping and Construction \u2014 marketing site.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

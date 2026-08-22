@@ -161,7 +161,7 @@ class Site {
 
   updateLinks() {
     this.links = document.body.querySelectorAll('a');
-    if (!this.siteUrl) this.siteUrl = 'https://telhaclarke.com.au/';
+    if (!this.siteUrl) this.siteUrl = 'https://gwarriors.ca';
     for (let i = 0; i < this.links.length; i++) {
       const link = this.links[i];
       if (link.href.indexOf(this.siteUrl) > -1) {

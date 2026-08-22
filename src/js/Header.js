@@ -25,6 +25,7 @@ class Header {
     this.$menuItems = this.$el.querySelectorAll('.header-link-mobile');
     this.$menuSocials = this.$el.querySelectorAll('.header-social-link');
     this.$overlay = this.$el.querySelector('.header-overlay');
+    this.$time = this.$el.querySelector('.header-time');
     this.$hour = this.$el.querySelector('#hour');
     this.$minute = this.$el.querySelector('#minute');
     this.$ampm = this.$el.querySelector('#ampm');
@@ -123,11 +124,14 @@ class Header {
   }
 
   updateTime() {
+    // The zone rides on the markup beside the city name, so the clock can't
+    // drift from the location it is labelled with. Falling back to undefined
+    // means the visitor's own zone rather than a wrong one.
     const parts = new Intl.DateTimeFormat('en-US', {
       hour: 'numeric',
       minute: '2-digit',
       hour12: true,
-      timeZone: 'America/Toronto',
+      timeZone: this.$time?.dataset.timezone || undefined,
     }).formatToParts(new Date());
 
     let hour = parts.find((p) => p.type === 'hour').value;
